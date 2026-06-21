@@ -88,40 +88,109 @@ nav {
 .nav-links a:hover { color: var(--white); }
 .nav-links a.active { color: var(--white); border-bottom-color: var(--gold); }
 
-/* ─── HERO ────────────────────────────────────────────────── */
+/* ─── HERO (variant 3 — full-bleed image, gradient from bottom) ── */
 .hero {
-  background: var(--mint);
-  border-bottom: 1px solid rgba(24,143,92,0.15);
-  padding: 48px 24px 40px;
+  position: relative;
+  min-height: 340px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('../power_sharing.png') center / cover no-repeat;
+  z-index: 0;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(16,40,32,0.95) 0%,
+    rgba(16,40,32,0.60) 50%,
+    rgba(16,40,32,0.25) 100%
+  );
+  z-index: 1;
 }
 
 .hero-inner {
+  position: relative;
+  z-index: 2;
   max-width: 1100px;
   margin: 0 auto;
-  padding-left: 20px;
-  border-left: 4px solid var(--green);
+  padding: 48px 24px;
+  width: 100%;
+}
+
+.hero-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--gold);
+  margin-bottom: 12px;
 }
 
 .hero h1 {
-  color: var(--ink);
-  font-size: clamp(24px, 4vw, 36px);
+  color: var(--white);
+  font-size: clamp(24px, 4vw, 42px);
   font-weight: 700;
   line-height: 1.2;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  max-width: 640px;
 }
 
 .hero p {
-  color: var(--slate);
+  color: rgba(255,255,255,0.80);
   font-size: 16px;
-  max-width: 640px;
+  max-width: 560px;
 }
 
 .hero .meta {
   font-size: 13px;
-  color: var(--slate);
-  margin-top: 12px;
-  opacity: 0.75;
+  color: rgba(255,255,255,0.55);
+  margin-top: 10px;
 }
+
+/* index hero is taller */
+.hero-home { min-height: 480px; }
+
+.hero-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.btn-primary {
+  background: var(--green);
+  color: var(--white);
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  transition: background 0.15s, transform 0.15s;
+}
+.btn-primary:hover { background: #147a4e; transform: translateY(-1px); }
+
+.btn-secondary {
+  background: transparent;
+  color: var(--white);
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  border: 2px solid rgba(255,255,255,0.40);
+  transition: border-color 0.15s, transform 0.15s;
+}
+.btn-secondary:hover { border-color: var(--white); transform: translateY(-1px); }
 
 /* ─── MAIN CONTENT ────────────────────────────────────────── */
 main {
