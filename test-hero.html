@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test — Background Hero</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* ── TEST: full-bleed hero with image background ── */
+    .hero-bg {
+      position: relative;
+      min-height: 520px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background: var(--ink);
+    }
+
+    /* the image sits in the right half */
+    .hero-bg-img {
+      position: absolute;
+      inset: 0;
+      background: url('power_sharing.png') right center / cover no-repeat;
+      opacity: 0.22;
+      z-index: 0;
+    }
+
+    /* dark-to-transparent gradient masks the right edge */
+    .hero-bg-gradient {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        90deg,
+        var(--ink) 38%,
+        rgba(16,40,32,0.80) 58%,
+        rgba(16,40,32,0.10) 100%
+      );
+      z-index: 1;
+    }
+
+    .hero-bg-content {
+      position: relative;
+      z-index: 2;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 64px 24px;
+      width: 100%;
+    }
+
+    .hero-bg-content .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+
+    .hero-bg-content h1 {
+      color: var(--white);
+      font-size: clamp(28px, 5vw, 48px);
+      font-weight: 700;
+      line-height: 1.15;
+      max-width: 560px;
+      margin-bottom: 20px;
+    }
+
+    .hero-bg-content h1 span {
+      color: var(--gold);
+    }
+
+    .hero-bg-content p {
+      color: rgba(255,255,255,0.75);
+      font-size: 17px;
+      max-width: 480px;
+      margin-bottom: 32px;
+      line-height: 1.6;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--green);
+      color: var(--white);
+      padding: 12px 24px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 15px;
+      text-decoration: none;
+      transition: background 0.15s, transform 0.15s;
+    }
+    .btn-primary:hover { background: #147a4e; transform: translateY(-1px); }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--white);
+      padding: 12px 24px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 15px;
+      text-decoration: none;
+      border: 2px solid rgba(255,255,255,0.35);
+      transition: border-color 0.15s, transform 0.15s;
+    }
+    .btn-secondary:hover { border-color: var(--white); transform: translateY(-1px); }
+
+    /* ── VARIANT 2: image on right, text on left, no overlay ── */
+    .hero-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 460px;
+      background: var(--mint);
+      overflow: hidden;
+    }
+
+    .hero-split-text {
+      padding: 60px 48px 60px 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: max(24px, calc((100vw - 1100px) / 2));
+    }
+
+    .hero-split-text .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--green);
+      margin-bottom: 14px;
+    }
+
+    .hero-split-text h1 {
+      color: var(--ink);
+      font-size: clamp(24px, 3.5vw, 40px);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .hero-split-text h1 span { color: var(--green); }
+
+    .hero-split-text p {
+      color: var(--slate);
+      font-size: 16px;
+      max-width: 420px;
+      margin-bottom: 28px;
+    }
+
+    .hero-split-img {
+      background: url('power_sharing.png') left center / cover no-repeat;
+    }
+
+    /* ── VARIANT 3: full-bleed, image shows clearly ── */
+    .hero-full {
+      position: relative;
+      min-height: 480px;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+    }
+
+    .hero-full::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('power_sharing.png') center / cover no-repeat;
+      z-index: 0;
+    }
+
+    .hero-full::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to top,
+        rgba(16,40,32,0.92) 0%,
+        rgba(16,40,32,0.55) 50%,
+        rgba(16,40,32,0.20) 100%
+      );
+      z-index: 1;
+    }
+
+    .hero-full-content {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 48px 24px;
+    }
+
+    .hero-full-content .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+
+    .hero-full-content h1 {
+      color: var(--white);
+      font-size: clamp(24px, 4vw, 42px);
+      font-weight: 700;
+      max-width: 600px;
+      margin-bottom: 12px;
+    }
+
+    .hero-full-content p {
+      color: rgba(255,255,255,0.80);
+      max-width: 480px;
+      font-size: 16px;
+      margin-bottom: 24px;
+    }
+
+    /* ── section labels ── */
+    .variant-label {
+      background: var(--ink);
+      color: var(--gold);
+      text-align: center;
+      padding: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <span class="monogram">PS</span>
+      <span class="wordmark">Power Sharing</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">← Back to portal</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ── VARIANT 1: Dark hero, image faded into background, text left ── -->
+<div class="variant-label">Variant 1 — Dark hero, image faded in background</div>
+<div class="hero-bg">
+  <div class="hero-bg-img"></div>
+  <div class="hero-bg-gradient"></div>
+  <div class="hero-bg-content">
+    <div class="eyebrow">Internal Hub · June 2026</div>
+    <h1>Share Solar.<br><span>Power Your Community.</span></h1>
+    <p>A peer-to-peer platform enabling solar owners to sell excess electricity directly to neighbors — built on Germany's new Energy Sharing law.</p>
+    <div class="hero-buttons">
+      <a href="index.html" class="btn-primary">Enter Portal →</a>
+      <a href="law.html" class="btn-secondary">The Law Explained</a>
+    </div>
+  </div>
+</div>
+
+<!-- ── VARIANT 2: Split — text left, image right ── -->
+<div class="variant-label">Variant 2 — Split layout, image on right</div>
+<div class="hero-split">
+  <div class="hero-split-text">
+    <div class="eyebrow">Internal Hub · June 2026</div>
+    <h1>Share Solar.<br><span>Power Your Community.</span></h1>
+    <p>A peer-to-peer platform enabling solar owners to sell excess electricity directly to neighbors.</p>
+    <div class="hero-buttons">
+      <a href="index.html" class="btn-primary">Enter Portal →</a>
+    </div>
+  </div>
+  <div class="hero-split-img"></div>
+</div>
+
+<!-- ── VARIANT 3: Full-bleed image, gradient from bottom ── -->
+<div class="variant-label">Variant 3 — Full-bleed image, gradient overlay from bottom</div>
+<div class="hero-full">
+  <div class="hero-full-content">
+    <div class="eyebrow">Internal Hub · June 2026</div>
+    <h1>Share Solar. Power Your Community.</h1>
+    <p>A peer-to-peer platform enabling solar owners to sell excess electricity directly to neighbors.</p>
+    <div class="hero-buttons">
+      <a href="index.html" class="btn-primary">Enter Portal →</a>
+      <a href="law.html" class="btn-secondary">The Law Explained</a>
+    </div>
+  </div>
+</div>
+
+<main>
+  <section style="text-align:center; padding: 40px 24px;">
+    <p style="color:var(--slate); font-size:15px;">This is a test page. Pick your preferred variant and we'll apply it to the full portal.</p>
+    <a href="index.html" style="color:var(--green); font-weight:600;">← Back to portal</a>
+  </section>
+</main>
+
+<footer>
+  <strong>Power Sharing</strong> &nbsp;·&nbsp; Hero background test page &nbsp;·&nbsp; Internal use only
+</footer>
+
+</body>
+</html>
