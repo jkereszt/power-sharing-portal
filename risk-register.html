@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Risk Register — Power Sharing</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <span class="monogram">PS</span>
+      <span class="wordmark">Power Sharing</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="overview.html">Overview</a></li>
+      <li><a href="law.html">The Law</a></li>
+      <li><a href="architecture.html">Architecture</a></li>
+      <li><a href="competitive.html">Competitive</a></li>
+      <li><a href="open-items.html">Open Items</a></li>
+      <li><a href="risk-register.html" class="active">Risks</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <h1>Risk Register</h1>
+    <p>15 tracked risks across legal, market, technology, and team. Know what we're up against.</p>
+    <p class="meta">Last updated: June 21, 2026 &nbsp;·&nbsp; 8 rated High severity</p>
+  </div>
+</div>
+
+<main>
+  <section>
+    <h2>High severity risks — quick view</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th style="width:60px;">ID</th><th>Risk</th><th style="width:100px;">Probability</th><th style="width:80px;">Status</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>R-001</code></td><td>Revenue model may violate the "non-commercial" clause in § 42c</td><td><span class="badge badge-medium">Medium</span></td><td><span class="badge badge-open">Open</span></td></tr>
+          <tr><td><code>R-003</code></td><td>Grid operators not technically ready — data capture starts Oct 2026 at earliest</td><td><span class="badge badge-high">High</span></td><td><span class="badge badge-open">Open</span></td></tr>
+          <tr><td><code>R-004</code></td><td>Incumbents (Enpal, E.ON, RWE) launch competing Energy Sharing products</td><td><span class="badge badge-high">High</span></td><td><span class="badge badge-open">Open</span></td></tr>
+          <tr><td><code>R-006</code></td><td>Smart meter penetration too low — legally required, not yet widespread</td><td><span class="badge badge-high">High</span></td><td><span class="badge badge-open">Open</span></td></tr>
+          <tr><td><code>R-007</code></td><td>800–900 fragmented grid operators, no standardised interfaces</td><td><span class="badge badge-high">High</span></td><td><span class="badge badge-open">Open</span></td></tr>
+          <tr><td><code>R-011</code></td><td>No legal expertise in the team</td><td><span class="badge badge-high">High</span></td><td><span class="badge badge-open">Open</span></td></tr>
+          <tr><td><code>R-013</code></td><td>Economics too weak — neighbor saves almost nothing vs. standard tariff</td><td><span class="badge badge-high">High</span></td><td><span class="badge badge-open">Open</span></td></tr>
+          <tr><td><code>R-014</code></td><td>Single-source restriction severely limits use cases</td><td><span class="badge badge-high">High</span></td><td><span class="badge badge-open">Open</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>Legal &amp; Regulatory</h2>
+
+    <div class="risk-card high">
+      <div class="risk-card-header">
+        <h4>R-001 — Revenue model may violate the law</h4>
+        <div class="risk-meta">
+          <span class="risk-id">R-001</span>
+          <span class="badge badge-high">High</span>
+          <span class="badge badge-medium">Prob: Medium</span>
+          <span class="badge badge-open">Open</span>
+        </div>
+      </div>
+      <p>The law requires that the sharing operator acts on a "non-commercial basis." If we charge a service fee, we may disqualify our users from the legal framework entirely. This must be resolved by a legal advisor before we finalise the business model.</p>
+      <p style="font-size:13px; margin-top:8px;"><em>Linked to: OI-001, OI-007</em></p>
+    </div>
+
+    <div class="risk-card medium">
+      <div class="risk-card-header">
+        <h4>R-002 — Law changes or tightens</h4>
+        <div class="risk-meta">
+          <span class="badge badge-medium">Medium</span>
+          <span class="badge badge-medium">Prob: Medium</span>
+          <span class="badge badge-open">Open</span>
+        </div>
+      </div>
+      <p>§ 42c EnWG only came into force in December 2025. Implementation guidance is still evolving. The Bundesnetzagentur may issue rules that restrict the market further. Monitor actively.</p>
+    </div>
+
+    <div class="risk-card high">
+      <div class="risk-card-header">
+        <h4>R-003 — Grid operators not technically ready <span class="risk-confirmed">✱ Confirmed</span></h4>
+        <div class="risk-meta">
+          <span class="badge badge-high">High</span>
+          <span class="badge badge-high">Prob: High</span>
+          <span class="badge badge-open">Open</span>
+        </div>
+      </div>
+      <p>Per BDEW internal documents: grid operators will not begin capturing per-connection data until October 1, 2026, with completion optimistically in late 2027. Until then, they can legally terminate Energy Sharing if data is not delivered on time.</p>
+      <p style="font-size:13px; margin-top:8px;"><em>Source: Golem.de, June 16, 2026</em></p>
+    </div>
+
+    <div class="risk-card high">
+      <div class="risk-card-header">
+        <h4>R-013 — Economics too weak <span class="risk-confirmed">✱ Confirmed</span></h4>
+        <div class="risk-meta">
+          <span class="badge badge-high">High</span>
+          <span class="badge badge-high">Prob: High</span>
+          <span class="badge badge-open">Open</span>
+        </div>
+      </div>
+      <p>A solar owner selling at 10 ct/kWh earns more than feed-in rates, but after grid fees, taxes, and surcharges, the neighbor still pays around 25 ct/kWh — barely less than the standard tariff of ~30 ct/kWh. The financial incentive to switch is small.</p>
+      <p style="font-size:13px; margin-top:8px;"><em>Source: Golem.de, June 16, 2026</em></p>
+    </div>
+
+    <div class="risk-card high">
+      <div class="risk-card-header">
+        <h4>R-014 — Single-source restriction <span class="risk-confirmed">✱ Confirmed</span></h4>
+        <div class="risk-meta">
+          <span class="badge badge-high">High</span>
+          <span class="badge badge-high">Prob: High</span>
+          <span class="badge badge-open">Open</span>
+        </div>
+      </div>
+      <p>BDEW internal documents confirm: Energy Sharing is limited to a single generation facility. You cannot combine solar and wind, and you cannot integrate battery storage or electric vehicles. Practical cases limited to: one large solar installation shared with a few households.</p>
+      <p style="font-size:13px; margin-top:8px;"><em>Source: BDEW internal documents via Golem.de</em></p>
+    </div>
+
+    <div class="risk-card medium">
+      <div class="risk-card-header">
+        <h4>R-015 — Law may have been deliberately designed to be unworkable</h4>
+        <div class="risk-meta">
+          <span class="badge badge-medium">Medium</span>
+          <span class="badge badge-medium">Prob: Medium</span>
+          <span class="badge badge-open">Open</span>
+        </div>
+      </div>
+      <p>Analyst Andreas Schmitz suggests the law may have been shaped by incumbent lobbying — energy suppliers and grid operators have strong incentives against Energy Sharing. Hanlon's Razor also applies: it may simply be incompetence rather than intent.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Market &amp; Competition</h2>
+
+    <div class="risk-card high">
+      <div class="risk-card-header">
+        <h4>R-004 — Incumbents launch competing products</h4>
+        <div class="risk-meta">
+          <span class="badge badge-high">High</span>
+          <span class="badge badge-high">Prob: High</span>
+          <span class="badge badge-open">Open</span>
+        </div>
+      </div>
+      <p>E.ON, RWE, EnBW, and large solar providers like Enpal all have the capability to build this. Enpal alone has 500,000+ installed solar systems and direct customer relationships. If they prioritise Energy Sharing, their distribution advantage is very significant.</p>
+    </div>
+
+    <div class="risk-card medium">
+      <div class="risk-card-header">
+        <h4>R-005 — Slow market adoption</h4>
+        <div class="risk-meta">
+          <span class="badge badge-medium">Medium</span>
+          <span class="badge badge-medium">Prob: Medium</span>
+          <span class="badge badge-open">Open</span>
+        </div>
+      </div>
+      <p>People may not want to manage energy contracts with their neighbors, even if the economics are attractive. UX must minimise friction to near zero. Behavioral barriers are real.</p>
+    </div>
+
+    <div class="risk-card high">
+      <div class="risk-card-header">
+        <h4>R-006 — Smart meter penetration too low <span class="risk-confirmed">✱ Confirmed</span></h4>
+        <div class="risk-meta">
+          <span class="badge badge-high">High</span>
+          <span class="badge badge-high">Prob: High</span>
+          <span class="badge badge-open">Open</span>
+        </div>
+      </div>
+      <p>Smart meters are legally required for all participants. Most German homes do not yet have one. Grid operators begin rollout in October 2026, with optimistic completion in late 2027. This limits near-term addressable market.</p>
+      <p style="font-size:13px; margin-top:8px;"><em>Source: Golem.de, June 16, 2026</em></p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Product &amp; Technology</h2>
+
+    <div class="risk-card high">
+      <div class="risk-card-header">
+        <h4>R-007 — Grid operator fragmentation <span class="risk-confirmed">✱ Confirmed</span></h4>
+        <div class="risk-meta">
+          <span class="badge badge-high">High</span>
+          <span class="badge badge-high">Prob: High</span>
+          <span class="badge badge-open">Open</span>
+        </div>
+      </div>
+      <p>Germany has 800–900 grid and metering operators, each with different systems. Many are still working on their own digitisation. All data collection and billing coordination currently sits with them, with no standardised interface.</p>
+      <p style="font-size:13px; margin-top:8px;"><em>Source: Golem.de, June 16, 2026</em></p>
+    </div>
+
+    <div class="risk-card medium">
+      <div class="risk-card-header">
+        <h4>R-008 — Smart meter data access restricted by GDPR</h4>
+        <div class="risk-meta">
+          <span class="badge badge-medium">Medium</span>
+          <span class="badge badge-medium">Prob: Medium</span>
+          <span class="badge badge-open">Open</span>
+        </div>
+      </div>
+      <p>Energy consumption data is sensitive personal data. Our data architecture must be GDPR-compliant from day one, which may limit what we can access, store, or process without explicit consent.</p>
+    </div>
+
+    <div class="risk-card medium">
+      <div class="risk-card-header">
+        <h4>R-009 — Prototype scope creep</h4>
+        <div class="risk-meta">
+          <span class="badge badge-medium">Medium</span>
+          <span class="badge badge-medium">Prob: Medium</span>
+          <span class="badge badge-open">Open</span>
+        </div>
+      </div>
+      <p>With many interesting problems to solve, there is a risk of building too broadly before validating core assumptions. MVP discipline is essential.</p>
+      <p style="font-size:13px; margin-top:8px;"><em>Owner: Janos</em></p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Team &amp; Execution</h2>
+
+    <div class="risk-card medium">
+      <div class="risk-card-header">
+        <h4>R-010 — Team disengagement over 16 months</h4>
+        <div class="risk-meta">
+          <span class="badge badge-medium">Medium</span>
+          <span class="badge badge-medium">Prob: Medium</span>
+          <span class="badge badge-open">Open</span>
+        </div>
+      </div>
+      <p>This is a long project alongside a demanding EMBA programme. Governance and commitment agreements should be established early to maintain momentum.</p>
+    </div>
+
+    <div class="risk-card high">
+      <div class="risk-card-header">
+        <h4>R-011 — No legal expertise in the team</h4>
+        <div class="risk-meta">
+          <span class="badge badge-high">High</span>
+          <span class="badge badge-high">Prob: High</span>
+          <span class="badge badge-open">Open</span>
+        </div>
+      </div>
+      <p>Regulatory interpretation is critical to almost every product and business model decision we face. Finding a legal advisor is a high priority and should happen before we commit to a revenue model.</p>
+      <p style="font-size:13px; margin-top:8px;"><em>Linked to: OI-007</em></p>
+    </div>
+
+    <div class="risk-card medium">
+      <div class="risk-card-header">
+        <h4>R-012 — Developer hiring delayed</h4>
+        <div class="risk-meta">
+          <span class="badge badge-medium">Medium</span>
+          <span class="badge badge-medium">Prob: Medium</span>
+          <span class="badge badge-open">Open</span>
+        </div>
+      </div>
+      <p>No developers have been engaged yet. Prototype timeline depends on finding the right people quickly. Janos is building the developer team as CPM.</p>
+      <p style="font-size:13px; margin-top:8px;"><em>Owner: Janos</em></p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <strong>Power Sharing</strong> &nbsp;·&nbsp; Internal use only &nbsp;·&nbsp; June 2026
+</footer>
+
+</body>
+</html>
