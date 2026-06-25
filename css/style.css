@@ -465,6 +465,7 @@ tbody tr:hover { background: rgba(24,143,92,0.06); }
 .competitor-header h4 { color: var(--ink); font-size: 16px; font-weight: 600; }
 .threat-high   { color: #D9534F; font-weight: 600; font-size: 13px; }
 .threat-medium { color: var(--gold); font-weight: 600; font-size: 13px; }
+.threat-low    { color: var(--text-muted); font-weight: 600; font-size: 13px; }
 
 /* ─── CHECKLIST ───────────────────────────────────────────── */
 .checklist { list-style: none; }
