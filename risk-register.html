@@ -31,7 +31,7 @@
     <div class="hero-eyebrow">Risk Management</div>
     <h1>Risk Register</h1>
     <p>15 tracked risks across legal, market, technology, and team. Know what we're up against.</p>
-    <p class="meta">Last updated: June 21, 2026 · 8 rated High severity</p>
+    <p class="meta">Last updated: June 25, 2026 · 7 rated High severity · 1 mitigated</p>
   </div>
 </div>
 
@@ -44,7 +44,7 @@
           <tr><th style="width:60px;">ID</th><th>Risk</th><th style="width:100px;">Probability</th><th style="width:80px;">Status</th></tr>
         </thead>
         <tbody>
-          <tr><td><code>R-001</code></td><td>Revenue model may violate the "non-commercial" clause in § 42c</td><td><span class="badge badge-medium">Medium</span></td><td><span class="badge badge-open">Open</span></td></tr>
+          <tr><td><code>R-001</code></td><td>Revenue model may violate the "non-commercial" clause in § 42c</td><td><span class="badge badge-medium">Low</span></td><td><span class="badge badge-open" style="background:var(--green);color:#fff;">Mitigated</span></td></tr>
           <tr><td><code>R-003</code></td><td>Grid operators not technically ready — data capture starts Oct 2026 at earliest</td><td><span class="badge badge-high">High</span></td><td><span class="badge badge-open">Open</span></td></tr>
           <tr><td><code>R-004</code></td><td>Incumbents (Enpal, E.ON, RWE) launch competing Energy Sharing products</td><td><span class="badge badge-high">High</span></td><td><span class="badge badge-open">Open</span></td></tr>
           <tr><td><code>R-006</code></td><td>Smart meter penetration too low — legally required, not yet widespread</td><td><span class="badge badge-high">High</span></td><td><span class="badge badge-open">Open</span></td></tr>
@@ -60,18 +60,18 @@
   <section>
     <h2>Legal &amp; Regulatory</h2>
 
-    <div class="risk-card high">
+    <div class="risk-card medium">
       <div class="risk-card-header">
-        <h4>R-001 — Revenue model may violate the law</h4>
+        <h4>R-001 — Revenue model may violate the law <span class="risk-confirmed" style="background:var(--green);color:#fff;padding:2px 8px;border-radius:3px;font-size:12px;">✓ Mitigated</span></h4>
         <div class="risk-meta">
           <span class="risk-id">R-001</span>
-          <span class="badge badge-high">High</span>
-          <span class="badge badge-medium">Prob: Medium</span>
-          <span class="badge badge-open">Open</span>
+          <span class="badge badge-medium">Low</span>
+          <span class="badge" style="background:var(--green);color:#fff;">Prob: Low</span>
+          <span class="badge" style="background:var(--green);color:#fff;">Mitigated</span>
         </div>
       </div>
-      <p>The law requires that the sharing operator acts on a "non-commercial basis." If we charge a service fee, we may disqualify our users from the legal framework entirely. This must be resolved by a legal advisor before we finalise the business model.</p>
-      <p style="font-size:13px; margin-top:8px;"><em>Linked to: OI-001, OI-007</em></p>
+      <p><strong>Resolved June 25, 2026.</strong> § 42c Abs. 5 explicitly permits professional third-party service providers to operate commercially. The "non-commercial basis" restriction applies to the <em>operator</em> (solar owner), not to us as a platform service provider. We can charge a service fee. The business model is legally sound.</p>
+      <p style="font-size:13px; margin-top:8px;"><em>Source: Tillmann Ehlers legal analysis package, June 2026. Previously linked to: OI-001, OI-007</em></p>
     </div>
 
     <div class="risk-card medium">
@@ -114,15 +114,15 @@
 
     <div class="risk-card high">
       <div class="risk-card-header">
-        <h4>R-014 — Single-source restriction <span class="risk-confirmed">✱ Confirmed</span></h4>
+        <h4>R-014 — Single-source restriction <span class="risk-confirmed">✱ Partially mitigated</span></h4>
         <div class="risk-meta">
           <span class="badge badge-high">High</span>
           <span class="badge badge-high">Prob: High</span>
-          <span class="badge badge-open">Open</span>
+          <span class="badge badge-open">Partial</span>
         </div>
       </div>
-      <p>BDEW internal documents confirm: Energy Sharing is limited to a single generation facility. You cannot combine solar and wind, and you cannot integrate battery storage or electric vehicles. Practical cases limited to: one large solar installation shared with a few households.</p>
-      <p style="font-size:13px; margin-top:8px;"><em>Source: BDEW internal documents via Golem.de</em></p>
+      <p>BDEW internal documents confirm: Energy Sharing is limited to a single generation facility. You cannot combine solar and wind. However, <strong>battery storage is possible</strong> if the installation meets § 19 Abs. 3b EEG conditions — complex, but viable. EVs remain out of scope. Primary practical case: one PV installation (with optional battery) shared with a few households.</p>
+      <p style="font-size:13px; margin-top:8px;"><em>Source: BDEW internal documents via Golem.de; partial mitigation via Tillmann Ehlers, June 2026</em></p>
     </div>
 
     <div class="risk-card medium">
