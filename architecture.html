@@ -31,7 +31,7 @@
     <div class="hero-eyebrow">Product Thinking</div>
     <h1>Platform Architecture</h1>
     <p>Why Energy Sharing is fundamentally an accounting problem — and how we build the solution.</p>
-    <p class="meta">Last updated: June 21, 2026</p>
+    <p class="meta">Last updated: June 27, 2026</p>
   </div>
 </div>
 
@@ -138,6 +138,51 @@
     <div class="callout callout-confirm">
       <strong>One sentence for investors:</strong> "We are a fintech platform for energy — we don't move electrons, we move value."
     </div>
+  </section>
+
+  <section>
+    <h2>Smart Meter Gateway — how data reaches us</h2>
+    <p>Germany uses a distinctive <strong>gateway-based smart meter architecture</strong>. Every smart meter installation includes a <strong>Smart Meter Gateway (SMGW)</strong> — a BSI-certified secure hub that collects, encrypts, and distributes data to authorised market participants. The SMGW is the only legal interface between meters, users, and utilities.</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Component</th><th>Role</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Digital meter sensor</strong></td><td>Measures electricity at 15-minute intervals (mandatory under § 42c)</td></tr>
+          <tr><td><strong>Smart Meter Gateway (SMGW)</strong></td><td>Encrypts and distributes data; enforces access control; BSI-certified</td></tr>
+          <tr><td><strong>CLS Interface</strong></td><td>Connects batteries, EV chargers, and heat pumps for future demand-response services</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:12px;">Germany primarily uses <strong>cellular (LTE/LTE-450)</strong> as the main communication channel, with Power Line Communication (PLC) as fallback. Power Sharing receives data downstream of the SMGW access control layer — meaning participants must authorise us to receive their meter data during onboarding.</p>
+    <div class="callout callout-warn">
+      <strong>Adoption barrier:</strong> Most German homes do not yet have a smart meter installed. The optical meter adapter — a camera-based device that reads existing digital meters — is a bridge solution already used commercially by WeShareEnergy. Whether to partner with an optical adapter provider is an open item (OI-016).
+    </div>
+  </section>
+
+  <section>
+    <h2>Technology decision — blockchain as an option under evaluation</h2>
+    <div class="callout callout-warn" style="margin-bottom:16px;">
+      <strong>⚠ Point of tension — not yet resolved.</strong> The current architecture direction is the centralised bookkeeping model. Blockchain-based settlement is a documented alternative that has not been selected. The team should discuss this explicitly.
+    </div>
+    <p>Blockchain-based P2P billing would use <strong>smart contracts</strong> to automate matching, settlement, and payment without a central billing system. Transactions would be recorded on an immutable decentralised ledger. Power Ledger (Australia) has demonstrated this model commercially, including a Germany pilot.</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Dimension</th><th>Blockchain option</th><th>Centralised bookkeeping (current direction)</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Infrastructure</td><td>Decentralised blockchain</td><td>Central platform database</td></tr>
+          <tr><td>Transparency</td><td>Full public ledger</td><td>Platform-controlled, participant-visible</td></tr>
+          <tr><td>Time to market</td><td>Longer</td><td>Shorter</td></tr>
+          <tr><td>Regulatory fit</td><td>Adds financial regulation layer</td><td>Clean fit with § 42c third-party model</td></tr>
+          <tr><td>Participant UX</td><td>Wallet/token management required</td><td>Standard app, no crypto knowledge needed</td></tr>
+          <tr><td>Scalability</td><td>Limited at high volume</td><td>High</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:12px;">Blockchain may become relevant if cross-border scale, trustless settlement between strangers, or tradable green energy token economics become product requirements. For the German § 42c MVP, the centralised bookkeeping model is simpler and faster to market.</p>
   </section>
 </main>
 
